@@ -34,7 +34,8 @@ string addSubstitutionErrors(string*a,double rate){
 	string b=*a;
 	int resolution=100000000;
 	int length=b.length();
-	int threshold=rate*resolution;
+	int threshold=(int)rate*resolution;
+
 	for(int i=0;i<length;i++){
 		int val=rand()%resolution;
 		if(val<threshold){
@@ -176,8 +177,6 @@ int main(int argc,char**argv){
 	}
 	cout<<endl;
 
-	int sequenceLength=sequence.length();
-
 	/* the sampler for position placement */
 	boost::mt19937 generator2(time(NULL)+getpid()*3);
 	boost::uniform_int<> uniformDistribution(0,totalLength-1);
@@ -196,7 +195,7 @@ int main(int argc,char**argv){
 		}
 
 		int globalStart=fragmentPositionSampler();
-		int observedDistance=fragmentLengthSampler();
+		int observedDistance=(int)fragmentLengthSampler();
 
 		int start=-1;
 		int sequenceId=-1;
