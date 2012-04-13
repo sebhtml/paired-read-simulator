@@ -199,9 +199,9 @@ int main(int argc,char**argv){
 		uint64_t globalStart=fragmentPositionSampler();
 		int observedDistance=(int)fragmentLengthSampler();
 
-		uint64_t start=-1;
+		int64_t start=-1;
 		int sequenceId=-1;
-		uint64_t sequenceLength=-1;
+		int64_t sequenceLength=-1;
 
 		// find the sequence that is hit */
 	
