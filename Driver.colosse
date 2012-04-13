@@ -1,0 +1,5 @@
+module purge
+module load compilers/intel/11.1.059
+module load mpi/openmpi/1.4.3_intel
+module load misc-libs/boost/1.44.0_intel
+
