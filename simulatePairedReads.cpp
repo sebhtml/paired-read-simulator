@@ -181,8 +181,8 @@ int main(int argc,char**argv){
 
 	/* the sampler for position placement */
 	boost::mt19937 generator2(time(NULL)+getpid()*3);
-	boost::uniform_int<> uniformDistribution(0,totalLength-1);
-	boost::variate_generator<boost::mt19937&,boost::uniform_int<> > fragmentPositionSampler(generator2,uniformDistribution);
+	boost::uniform_int<uint64_t> uniformDistribution(0,totalLength-1);
+	boost::variate_generator<boost::mt19937&,boost::uniform_int<uint64_t> > fragmentPositionSampler(generator2,uniformDistribution);
 
 	cout<<endl;
 	cout<<"Commencing..."<<endl;
