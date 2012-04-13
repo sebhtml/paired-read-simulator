@@ -164,7 +164,7 @@ int main(int argc,char**argv){
 
 	vector<int> lengths;
 
-	int totalLength=0;
+	uint64_t totalLength=0;
 
 	for(int i=0;i<(int)genomeSequences.size();i++){
 		cout<<"  "<<i<<"  ----->  "<<headerNames[i]<<" / "<<genomeSequences[i].length()<<" nucleotides !"<<endl;
@@ -175,6 +175,8 @@ int main(int argc,char**argv){
 		totalLength+=sequenceLength;
 
 	}
+	cout<<endl;
+	cout<<"TotalLength: "<<totalLength<<endl;
 	cout<<endl;
 
 	/* the sampler for position placement */
