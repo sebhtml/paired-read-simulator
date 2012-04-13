@@ -196,16 +196,16 @@ int main(int argc,char**argv){
 			cout<<i+1<<"/"<<pairs<<endl;
 		}
 
-		int globalStart=fragmentPositionSampler();
+		uint64_t globalStart=fragmentPositionSampler();
 		int observedDistance=(int)fragmentLengthSampler();
 
-		int start=-1;
+		uint64_t start=-1;
 		int sequenceId=-1;
-		int sequenceLength=-1;
+		uint64_t sequenceLength=-1;
 
 		// find the sequence that is hit */
 	
-		int sum=0;
+		uint64_t sum=0;
 		for(int k=0;k<(int)lengths.size();k++){
 			sum+=lengths[k];
 
